@@ -24,7 +24,7 @@ const AllRequests = () => {
                 return request._id !== id
             })
             setRequestList(newRequestList)
-            navigate('/')
+            navigate('/unitDashboard')
         }).catch((err)=>{
             console.log(err)
         })
@@ -54,12 +54,13 @@ const AllRequests = () => {
                         <td>
                             <Link to={`/requests/${request._id}`}>Details</Link>  |
                             <Link to={`/requests/${request._id}/edit`}>Edit</Link> |
-                            <button className="btn btn-danger" onClick={()=>deleteHandler(request._id)} >Done</button>
+                            <button className="btn btn-link" onClick={()=>deleteHandler(request._id)} >Done</button>
                         </td>
                     </tr>
                 ))
             }
             </table>
+            <Link to={`/requests/new`}>Add A New Request</Link>
         </div>
     )
 }
