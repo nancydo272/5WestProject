@@ -53,8 +53,7 @@ const AllRequests = () => {
                         <td>{request.urgency}</td>
                         <td>
                             <Link to={`/requests/${request._id}`}>Details</Link>  |
-                            <Link to={`/requests/${request._id}/edit`}>Edit</Link> |
-                            <button className="btn btn-link" onClick={()=>deleteHandler(request._id)} >Done</button>
+                            <button className="btn btn-success" onClick={()=>deleteHandler(request._id)}>Completed</button>
                         </td>
                     </tr>
                 ))

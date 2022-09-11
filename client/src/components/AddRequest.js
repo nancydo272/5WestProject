@@ -87,8 +87,8 @@ const AddRequest = () => {
                     </select>
                     {errors.urgency ? <span className="text-danger">{errors.urgency.message}</span> : null }<br></br>
                 </div>
-                <button className="btn btn-primary">Add</button>
-                <Link to ={'/unitDashboard'}>Cancel</Link>
+                <button className="btn btn-primary m-1">Add</button>
+                <Link to ={'/unitDashboard'} className="btn btn-primary">Cancel</Link>
             </form>
         </div>
     )
