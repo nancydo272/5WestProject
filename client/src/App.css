@@ -1,4 +1,91 @@
+*{
+  background-color: #c1c8e4; 
+  color: #5680e9; 
+  margin:0 auto;
+}
 .App {
   text-align: center;
 }
+form{
+  width: 75%; 
+  border: solid 5px white; 
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+.form-row{
+  width: 75%; 
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px; 
+}
+h1{
+  font-family: cursive; 
+  color: white; 
+  font-weight: bold; 
+  margin-top: 20px; 
+}
+label{
+  font-weight: bold; 
+}
+.completed-btn{
+  background-color: #5680e9; 
+  color: white; 
+  font-weight: bold; 
+  border-radius: 15%;
+  margin: 5px; 
+  border: none; 
+  padding: 8px; 
+}
+.edit-btn{
+  color:white; 
+  font-weight: bold; 
+  background-color:  #5680e9; 
+  border-radius: 15%;
+  margin: 5px; 
+  padding: 10px; 
+  text-decoration: none; 
+}
+.one-per{
+  width: 75%; 
+}
+.request-table{
+  height: 200px; 
+  width: 300px; 
+}
+.back-btn{
+  background-color: white; 
+  border-radius: 5%;
+  margin: 5px; 
+  padding: 10px; 
+  text-decoration: none;  
+}
+.room-num{
+  color: white; 
+  font-weight: bold; 
+}
+.main-container{
+  width: 75%; 
+}
+.bottom-half{
+  margin-top:10px; 
+  width: 75%; 
+  border: dotted white 2px; 
+  padding: 30px; 
+  border-radius: 10px;
+  background-color: #84ceeb; 
+}
 
+select{
+  width: 250px;
+  padding-bottom: 10px; 
+}
+
+textarea{
+  width: 250px; 
+}
+.lasts{
+  background-color: #84ceeb; 
+}

@@ -25,19 +25,16 @@ const OneRequest = () => {
                 return request._id !== id
             })
             setRequestList(newRequestList)
-            navigate('/unitDashboard')
+            navigate('/')
         }).catch((err)=>{
             console.log(err)
         })
     }
 
     return (
-        <div className="w-75 p-3">
-            <div className="d-flex justify-content-between">
+        <div className="one-per">
                 <h1>{request.room}'s Request</h1>
-                <Link to ={'/unitDashboard'}>Go Back</Link>
-            </div>
-            <table>
+            <table className="request-table">
                 <tr>
                     <th>Request:</th>
                     <td>{request.request} {request.custom}</td>
@@ -46,11 +43,15 @@ const OneRequest = () => {
                     <th>Urgency:</th>
                     <td>{request.urgency}</td>
                 </tr>
+                <tr>
+                    <th>Actions:</th>
+                    <td>
+                        <button className="completed-btn" onClick={()=>deleteHandler(request._id)} >Completed</button>
+                        <Link to={`/requests/${request._id}/edit`} className="edit-btn">Edit </Link>
+                        </td>
+                </tr>
             </table>
-            <div className="d-flex flex-row">
-                <button className="btn btn-success" onClick={()=>deleteHandler(request._id)} >Completed</button>
-                <Link to={`/requests/${request._id}/edit`} className="btn btn-warning ">Edit </Link>
-            </div>
+            <Link className="back-btn" to ={'/'}>Back to the Unit's Dashboard!</Link>
         </div>
     )
 }

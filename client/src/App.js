@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path ="/unitDashboard" element ={<AllRequests />}/>
+          <Route path ="/" element ={<AllRequests />}/>
           <Route path ="/requests/:id" element ={<OneRequest />}/>
           <Route path ="/requests/new" element ={<AddRequest />}/>
           <Route path ="/requests/:id/edit" element ={<EditRequest />}/>

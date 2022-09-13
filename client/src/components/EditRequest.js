@@ -47,7 +47,7 @@ const EditRequest = () => {
         <div>
             <h1>Edit Request</h1>
             <form onSubmit={editHandler}>
-                <div>
+                <div className="form-row">
                     <label>Room Number:</label>
                     <select value={room} name="room" onChange ={(e)=> setRoom(e.target.value)}>
                         <option>Select A Room Number</option>
@@ -67,9 +67,8 @@ const EditRequest = () => {
                         <option value="5116">5116</option>
                         <option value="5118">5118</option>
                     </select>
-                    {errors.room ? <span className="text-danger">{errors.room.message}</span> : null }<br></br>
                 </div>
-                <div>
+                <div className="form-row">
                     <label>Request:</label>
                     <select value={request} name="request" onChange ={(e)=> setRequest(e.target.value)}>
                         <option>Select A Request</option>
@@ -84,13 +83,12 @@ const EditRequest = () => {
                         <option value="IV Pump is beeping">IV Pump is beeping</option>
                         <option value="Custom:">Custom:</option>
                     </select>
-                    {errors.room ? <span className="text-danger">{errors.room.message}</span> : null }<br></br>
                 </div>
-                <div>
+                <div className="form-row">
                     <label>Custom Request:</label>
-                    <textarea type="text" value ={custom}onChange={(e)=>setCustom(e.target.value)} />
+                    <textarea type="text" value={custom} onChange={(e)=>setCustom(e.target.value)} />
                 </div>
-                <div>
+                <div className="form-row">
                     <label>Urgency:</label>
                     <select value={urgency} name="urgency" onChange ={(e)=> setUrgency(e.target.value)}>
                         <option>Select Urgency level</option>
@@ -100,11 +98,20 @@ const EditRequest = () => {
                         <option value="Medium-High">Medium-High</option>
                         <option value="High">High</option>
                     </select>
-                    {errors.urgency ? <span className="text-danger">{errors.urgency.message}</span> : null }<br></br>
                 </div>
-                <button className="btn btn-primary">Update</button>
-                <Link to ={'/unitDashboard'} className="btn btn-primary m-1">Cancel</Link>
+                <div>
+                    <button className="btn btn-primary">Update</button>
+                    <Link to ={'/'} className="btn btn-primary m-1">Cancel</Link>
+                </div>
             </form>
+            <div>
+                {errors.room ? <span className="text-danger">{errors.room.message}</span> : null }<br></br>
+                {errors.request ? <span className="text-danger">{errors.request.message}</span> : null }<br></br>
+                {errors.urgency ? <span className="text-danger">{errors.urgency.message}</span> : null }<br></br>
+            </div>
+            <h5>Thank you for being so patient, someone from our excellent staff will be with you soon!</h5>
+            <p>Please ask our staff about the Daisy Award Nominations.  </p>
+
         </div>
     )
 }
