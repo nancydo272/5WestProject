@@ -4,7 +4,7 @@ const CallBellSchema = new mongoose.Schema(
     {
         room: {
             type: String, 
-            required: [true, 'You need to add your room number!'], 
+            required: [true, 'Your room number is REQUIRED!'], 
             enum: [
                 '5100', 
                 '5101', 
@@ -25,7 +25,7 @@ const CallBellSchema = new mongoose.Schema(
         },
         request: {
             type: String, 
-            required: [true, 'You need to select one of the following'], 
+            required: [true, 'Your selection is REQUIRED!'], 
             enum: [
                 'Glass of water', 
                 'Pain Medication', 
@@ -35,7 +35,8 @@ const CallBellSchema = new mongoose.Schema(
                 'Speak with nurse', 
                 'Need to use the bathroom', 
                 'Spill/Clean up', 
-                'Custom'
+                'IV Pump is beeping', 
+                'Custom:'
             ]
         },
         custom: {
@@ -43,13 +44,13 @@ const CallBellSchema = new mongoose.Schema(
         }, 
         urgency: {
             type: String, 
-            required: [true, 'Urgency rating is required!'], 
+            required: [true, 'Your urgency rating is REQUIRED!'], 
             enum: [
-                'low', 
-                'low-medium', 
-                'medium', 
-                "medium-high", 
-                'high'
+                'Low', 
+                'Low-Medium', 
+                'Medium', 
+                "Medium-High", 
+                'High'
             ]
         }
     }, 
