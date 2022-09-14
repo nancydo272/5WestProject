@@ -60,7 +60,7 @@ const AllRequests = () => {
                 <Link to={`/requests/new`}>Add A New Request</Link>
             </div>
             <div className="bottom-half">
-                <h1 className="lasts">A Message from the Creater: Nancy Do</h1>
+                <h1 className="lasts">A Message from the Creator: Nancy Do</h1>
                 <h4 className="lasts">Cardiac Critical Care Technician to Full Stack Software Engineer</h4>
                 <p className="lasts">Thank you for taking the time to use this new feature. The goal of this project was to decrease the nursing staff's alarm
                     fatigue and to help assit patients who are isolating from covid-19. What is alarm fatigue? Alarm fatigue occurs when clinicians experience high exposure to medical device alarms, causing alarm desensitization and leading to missed alarms or delayed response.

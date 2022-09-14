@@ -22,7 +22,7 @@ const AddRequest = () => {
         })
         .then((res)=>{
             console.log(res)
-            navigate('/unitDashboard')
+            navigate('/')
         }).catch((err)=>{
             console.log(err)
             setErrors(err.response.data.error)
