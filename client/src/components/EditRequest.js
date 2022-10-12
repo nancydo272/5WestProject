@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'; 
 import {useParams, useNavigate, Link} from 'react-router-dom'; 
 import axios from 'axios'; 
+import banner from '../images/5westbanner.jpg'; 
 
 const EditRequest = () => {
     
@@ -45,8 +46,17 @@ const EditRequest = () => {
 
     return (
         <div>
-            <h1>Edit Request</h1>
+            <div className="nav-bar">
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nancy-do-9588a9158/">Contact the Creator</a> |                    
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272">About the Creator </a> |
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272/5WestProject">About This Project</a> |
+                <Link className="nav-bar h5" to ={'/'}>Unit Dashboard</Link>
+            </div>
+            <div>
+                <img className="banner" src={banner} alt="blue hispital banner"/>
+            </div>
             <form onSubmit={editHandler}>
+            <h1>Edit Request</h1>
                 <div className="form-row">
                     <label>Room Number:</label>
                     <select value={room} name="room" onChange ={(e)=> setRoom(e.target.value)}>
@@ -100,8 +110,8 @@ const EditRequest = () => {
                     </select>
                 </div>
                 <div>
-                    <button className="btn btn-primary">Update</button>
-                    <Link to ={'/'} className="btn btn-primary m-1">Cancel</Link>
+                    <button className="addButton">Update</button>
+                    <Link to ={'/'} className="cancelButton">Cancel</Link>
                 </div>
             </form>
             <div>
@@ -109,7 +119,7 @@ const EditRequest = () => {
                 {errors.request ? <span className="text-danger">{errors.request.message}</span> : null }<br></br>
                 {errors.urgency ? <span className="text-danger">{errors.urgency.message}</span> : null }<br></br>
             </div>
-            <h5>Thank you for being so patient, someone from our excellent staff will be with you soon!</h5>
+            <h5>Thank you for being so patient, someone from our excellent staff will be with you shortly!</h5>
             <p>Please ask our staff about the Daisy Award Nominations.  </p>
 
         </div>

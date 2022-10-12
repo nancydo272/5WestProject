@@ -1,6 +1,11 @@
 import React, {useState, useEffect } from 'react'; 
 import axios from 'axios'; 
 import {Link, useNavigate} from 'react-router-dom'; 
+import banner from '../images/5westbanner.jpg'; 
+import westbanner from '../images/westbanner.jpg'; 
+import west1 from '../images/west1.jpg'; 
+import west2 from '../images/west2.jpg'; 
+import west3 from '../images/west3.jpg'; 
 
 
 const AllRequests = () => {
@@ -29,11 +34,23 @@ const AllRequests = () => {
             console.log(err)
         })
     }
+    const api = axios.create({
+        baseURL: ` https://zenquotes.io/ `
+    })
     return (
         <div> 
-            <h1>Welcome to 5W/NW at TJUH Center City!</h1>
+            <div className="nav-bar">
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nancy-do-9588a9158/">Contact the Creator</a> |                    
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272">About the Creator </a> |
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272/5WestProject">About This Project</a> 
+            </div>
+            <div>
+                <img className="banner" src={banner} alt="blue hispital banner"/>
+            </div>
             <div className="main-container">
-                <table className="col-12 mx-auto table table-hover text-start mt-4">
+                <h1>Welcome to 5West at TJUH Center City!</h1>
+                <h4>Current Request from 5West Patients:</h4>
+                <table className="table table-hover text-start mt-4">
                     <thead>
                         <tr>
                             <th>Room #</th>
@@ -42,34 +59,56 @@ const AllRequests = () => {
                             <th>Actions</th>
                         </tr>
                     </thead>
-                
-                    {
-                        requestList.map((request)=>(
-                        <tr>
-                            <td className="room-num">{request.room}</td>
-                            <td>{request.request} {request.custom}</td>
-                            <td>{request.urgency}</td>
-                            <td>
-                                <Link to={`/requests/${request._id}`}>Details</Link>  |
-                                <button className="btn btn-link" onClick={()=>deleteHandler(request._id)}>Completed</button>
-                            </td>
-                        </tr>
-                    ))
-                }
+                    <tbody>
+                            {
+                                requestList.map((request)=>(
+                                <tr>
+                                    <td className="room-num">{request.room}</td>
+                                    <td>{request.request} {request.custom}</td>
+                                    <td>{request.urgency}</td>
+                                    <td>
+                                        <Link  className ="actions" to={`/requests/${request._id}`}>Details</Link>  |
+                                        <button className=" actions btn btn-link" onClick={()=>deleteHandler(request._id)}>Completed</button>
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
                 </table>
-                <Link to={`/requests/new`}>Add A New Request</Link>
+                <Link className ="newRequest" to={`/requests/new`}>Add A New Request</Link>
             </div>
-            <div className="bottom-half">
-                <h1 className="lasts">A Message from the Creator: Nancy Do</h1>
-                <h4 className="lasts">Cardiac Critical Care Technician to Full Stack Software Engineer</h4>
-                <p className="lasts">Thank you for taking the time to use this new feature. The goal of this project was to decrease the nursing staff's alarm
-                    fatigue and to help assit patients who are isolating from covid-19. What is alarm fatigue? Alarm fatigue occurs when clinicians experience high exposure to medical device alarms, causing alarm desensitization and leading to missed alarms or delayed response.
-                    In order to take care of you and your loved one in a timely matter, please take the time to use this application. Thank you for your time and patience, pleae feel free to contact me about further questions or suggetions. 
-                </p>
-                <div className= "d-flex justify-content-center lasts"> |
-                    <a className="lasts text-white" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nancy-do-9588a9158/">LinkedIn</a> |                    
-                    <a className="lasts text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272">Github </a> |
-                    <a className="lasts text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272/5WestProject">About This Project</a> |
+            <div className="bottom-container">
+                <div className="row1">
+                    <img className="westImages" src={westbanner} alt="teal scrubs"/>
+                    <div className="message">
+                        <p>TODAY'S QUOTES IS FROM ZENQUOTES</p>
+                        <h2>"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart."</h2>
+                        <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://zenquotes.io/">More from ZenQuotes</a>
+                    </div>
+                </div>
+                <div className ="row2">
+                    <div className="message">
+                        <p>COVID GUIDELINES</p>
+                        <h2>You are our family, we are here to protect your loved ones!</h2>
+                        <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html">More about CDC's guidelines</a>
+                    </div>
+                    <img className="westImages" src={west1} alt="animated hospital workers"/>
+                </div>
+                <div className="row3">
+                    <img className="westImages" src={west2} alt="Thomas Jefferson Hospital"/>
+                    <div className="message">
+                        <p>THOMAS JEFFERSON UNIVERSITY HOSPITAL</p>
+                        <h2>Your neighborhood hospital! Just minutes away from Patco, Blue and Orange Line.</h2>
+                        <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://www.jeffersonhealth.org/home">Vist TJUH Official Website</a>
+                    </div>
+                </div>
+                <div className="row4">
+                    <div className="message">
+                        <p>PHILADELPHIA, PA</p>
+                        <h2>The city of brotherly love! We are known for our iconic food scene and arts districts. Explore NOW!</h2>
+                        <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://www.visitphilly.com/"> Explore Philly!</a>
+                    </div>
+                    <img className="westImages" src={west3} alt="Philadelphia City"/>
                 </div>
             </div>
         </div>

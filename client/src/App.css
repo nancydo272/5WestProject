@@ -1,7 +1,6 @@
 *{
-  background-color: #c1c8e4; 
-  color: #5680e9; 
   margin:0 auto;
+  color:#033b4c; 
 }
 .App {
   text-align: center;
@@ -13,6 +12,7 @@ form{
   align-items: center;
   margin-top: 20px; 
   margin-bottom: 20px; 
+  background-color:#f8fafb;
 }
 .form-row{
   width: 75%; 
@@ -22,70 +22,122 @@ form{
   margin: 10px; 
 }
 h1{
-  font-family: cursive; 
-  color: white; 
+  font-family: Arial, Helvetica, sans-serif; 
   font-weight: bold; 
   margin-top: 20px; 
+  color: #033b4c
 }
 label{
   font-weight: bold; 
-}
-.completed-btn{
-  background-color: #5680e9; 
-  color: white; 
-  font-weight: bold; 
-  border-radius: 15%;
-  margin: 5px; 
-  border: none; 
-  padding: 8px; 
-}
-.edit-btn{
-  color:white; 
-  font-weight: bold; 
-  background-color:  #5680e9; 
-  border-radius: 15%;
-  margin: 5px; 
-  padding: 10px; 
-  text-decoration: none; 
 }
 .one-per{
   width: 75%; 
 }
 .request-table{
   height: 200px; 
-  width: 300px; 
-}
-.back-btn{
-  background-color: white; 
-  border-radius: 5%;
-  margin: 5px; 
-  padding: 10px; 
-  text-decoration: none;  
+  width: 50%; 
+  margin: 0 auto; 
+  text-align: left; 
 }
 .room-num{
-  color: white; 
   font-weight: bold; 
 }
 .main-container{
-  width: 75%; 
-}
-.bottom-half{
-  margin-top:10px; 
-  width: 75%; 
-  border: dotted white 2px; 
-  padding: 30px; 
-  border-radius: 10px;
-  background-color: #84ceeb; 
+  background-color:#f7f3e4;
+  padding: 50px; 
 }
 
 select{
   width: 250px;
   padding-bottom: 10px; 
 }
-
 textarea{
   width: 250px; 
 }
-.lasts{
-  background-color: #84ceeb; 
+.nav-bar{
+  background-color: #033b4c; 
+  color: #f7f3e4; 
+  justify-content: space-evenly;
+  text-decoration: none;
+  height: 70px; 
+  padding: 20px; 
+}
+.actions{
+  color:#033b4c; 
+  text-decoration: none;
+}
+.newRequest{
+  color:#033b4c; 
+  text-decoration: none;
+  font-weight: bold;
+  border: solid 2px #033b4c; 
+  border-radius: 5px;
+  background-color:#fcfaf3; 
+  padding:10px; 
+  width: 200px; 
+  float: right;
+}
+.banner{
+  width: 100%;
+}
+h4{
+  text-align: left;
+  margin-top: 10px; 
+}
+.bottom-container{
+  margin: 0 auto;
+  width: 75%; 
+
+}
+.row1, .row2, .row3, .row4{
+  background-color:#f8fafb;  
+  margin: 75px; 
+  width:1168px; 
+  height:357px; 
+  display: flex; 
+}
+.westImages{
+  width: 476px;
+  height:357px; 
+}
+.message{
+  padding: 25px; 
+  color: #033b4c; 
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 476px
+}
+.message>h2{
+  font-weight: bolder;
+  font-family: georgina bold, serif; 
+  margin-bottom: 50px; 
+}
+.rowButton{
+  background-color: #008181; 
+  color: #f8fafb; 
+  width: 200px; 
+  text-decoration: none;
+  padding:25px; 
+  margin-top: 25px; 
+  border-radius: 5px;
+}
+.addButton{
+  background-color: #008181; 
+  color: #f8fafb; 
+  width: 150px;
+  border-radius: 5px;
+  border: none; 
+  padding: 10px;
+  margin: 10px; 
+}
+.cancelButton{
+  background-color: #008181; 
+  color: #f8fafb; 
+  width: 150px;
+  border-radius: 5px;
+  padding-left:50px; 
+  padding-right:50px; 
+  padding-top: 12px; 
+  padding-bottom: 12px; 
+  text-decoration: none;
 }

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'; 
 import axios from 'axios'; 
 import {useParams, Link, useNavigate} from 'react-router-dom'; 
+import banner from '../images/5westbanner.jpg'; 
 
 const OneRequest = () => {
     
@@ -33,25 +34,33 @@ const OneRequest = () => {
 
     return (
         <div className="one-per">
-                <h1>{request.room}'s Request</h1>
+            <div className="nav-bar">
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nancy-do-9588a9158/">Contact the Creator</a> |                    
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272">About the Creator </a> |
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272/5WestProject">About This Project</a> |
+                <Link className="nav-bar h5" to ={'/'}>Unit Dashboard</Link>
+            </div>
+            <div>
+                <img className="banner" src={banner} alt="blue hispital banner"/>
+            </div>
             <table className="request-table">
-                <tr>
-                    <th>Request:</th>
-                    <td>{request.request} {request.custom}</td>
-                </tr>
-                <tr>
-                    <th>Urgency:</th>
-                    <td>{request.urgency}</td>
-                </tr>
-                <tr>
-                    <th>Actions:</th>
-                    <td>
-                        <button className="completed-btn" onClick={()=>deleteHandler(request._id)} >Completed</button>
-                        <Link to={`/requests/${request._id}/edit`} className="edit-btn">Edit </Link>
-                        </td>
-                </tr>
+                <h1>{request.room}'s Request</h1>
+                <tbody>
+                    <tr>
+                        <th>Request:</th>
+                        <td>{request.request} {request.custom}</td>
+                    </tr>
+                    <tr>
+                        <th>Urgency:</th>
+                        <td>{request.urgency}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><button className="addButton" onClick={()=>deleteHandler(request._id)} >Completed</button>
+                        <Link to={`/requests/${request._id}/edit`} className="cancelButton">Edit </Link></td>
+                    </tr>
+                </tbody>
             </table>
-            <Link className="back-btn" to ={'/'}>Back to the Unit's Dashboard!</Link>
         </div>
     )
 }

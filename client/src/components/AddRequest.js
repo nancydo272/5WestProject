@@ -1,6 +1,7 @@
 import React, {useState} from 'react'; 
 import axios from 'axios'; 
-import { useNavigate, Link} from 'react-router-dom'
+import { useNavigate, Link} from 'react-router-dom'; 
+import banner from '../images/5westbanner.jpg'; 
 
 const AddRequest = () => {
 
@@ -30,8 +31,17 @@ const AddRequest = () => {
     }
     return (
         <div>
-            <h1>Adding A New Request</h1>
+            <div className="nav-bar">
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nancy-do-9588a9158/">Contact the Creator</a> |                    
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272">About the Creator </a> |
+                <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272/5WestProject">About This Project</a> 
+                <Link className="nav-bar h5" to ={'/'}>Unit Dashboard</Link>
+            </div>
+            <div>
+                <img className="banner" src={banner} alt="blue hispital banner"/>
+            </div>
             <form onSubmit={submitHandler}>
+                <h1>Adding A New Request</h1>
                 <div className="form-row">
                     <label>Room Number:</label>
                     <select value={room} name="room" onChange ={(e)=> setRoom(e.target.value)}>
@@ -85,8 +95,8 @@ const AddRequest = () => {
                     </select>
                 </div>
                 <div>
-                    <button className="btn btn-primary m-1">Add</button> 
-                    <Link to ={'/'} className="btn btn-primary">Cancel</Link>
+                    <button className="addButton">Add</button> 
+                    <Link to ={'/'} className="cancelButton">Cancel</Link>
                 </div>
             </form>
             <div>
