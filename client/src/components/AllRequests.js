@@ -34,9 +34,6 @@ const AllRequests = () => {
             console.log(err)
         })
     }
-    const api = axios.create({
-        baseURL: ` https://zenquotes.io/ `
-    })
     return (
         <div> 
             <div className="nav-bar">
@@ -49,7 +46,7 @@ const AllRequests = () => {
             </div>
             <div className="main-container">
                 <h1>Welcome to 5West at TJUH Center City!</h1>
-                <h4>Current Request from 5West Patients:</h4>
+                <h4>Current Requests from 5West Patients:</h4>
                 <table className="table table-hover text-start mt-4">
                     <thead>
                         <tr>
