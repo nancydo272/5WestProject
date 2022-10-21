@@ -7,7 +7,7 @@
 }
 .container{
     width: 100%;
-    max-width: 1280px;
+    /* max-width: 1280px; */
     margin: 0 auto;
 }
 form{
@@ -96,14 +96,14 @@ h4{
 }
 .row1, .row2, .row3, .row4{
   width:85%; 
-  height:357px; 
+  height:15%; 
   display: flex; 
   margin: 0 auto;
   background-color: #f8fafb; 
   margin-bottom: 50px; 
 }
 .westImages{
-  width: 476px;
+  width: 50%;
   height:357px; 
 }
 .message{
@@ -111,7 +111,7 @@ h4{
   color: #033b4c; 
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  width: 476px
+  width: 50%;
 }
 .message>h2{
   font-weight: bolder;
