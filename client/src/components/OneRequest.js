@@ -44,7 +44,7 @@ const OneRequest = () => {
                 <img className="banner" src={banner} alt="blue hispital banner"/>
             </div>
             <table className="request-table">
-                <h1>{request.room}'s Request</h1>
+                <h1>{request.room}</h1>
                 <tbody>
                     <tr>
                         <th>Request:</th>
@@ -55,9 +55,9 @@ const OneRequest = () => {
                         <td>{request.urgency}</td>
                     </tr>
                     <tr>
-                        <th></th>
-                        <td><button className="addButton" onClick={()=>deleteHandler(request._id)} >Completed</button>
-                        <Link to={`/requests/${request._id}/edit`} className="cancelButton">Edit </Link></td>
+                        <th>Actions</th>
+                        <td><button className="addButton" onClick={()=>deleteHandler(request._id)} >Completed</button></td>
+                        <td><Link to={`/requests/${request._id}/edit`} className="cancelButton">Edit </Link></td>
                     </tr>
                 </tbody>
             </table>

@@ -5,6 +5,11 @@
 .App {
   text-align: center;
 }
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
 form{
   width: 75%; 
   border: solid 5px white; 
@@ -39,6 +44,9 @@ label{
   margin: 0 auto; 
   text-align: left; 
 }
+tr{
+  height: 50px; 
+}
 .room-num{
   font-weight: bold; 
 }
@@ -46,7 +54,9 @@ label{
   background-color:#f7f3e4;
   padding: 50px; 
 }
-
+.bottom-container{
+  margin-top: 50px; 
+}
 select{
   width: 250px;
   padding-bottom: 10px; 
@@ -84,17 +94,13 @@ h4{
   text-align: left;
   margin-top: 10px; 
 }
-.bottom-container{
-  margin: 0 auto;
-  width: 75%; 
-
-}
 .row1, .row2, .row3, .row4{
-  background-color:#f8fafb;  
-  margin: 75px; 
-  width:1168px; 
+  width:85%; 
   height:357px; 
   display: flex; 
+  margin: 0 auto;
+  background-color: #f8fafb; 
+  margin-bottom: 50px; 
 }
 .westImages{
   width: 476px;

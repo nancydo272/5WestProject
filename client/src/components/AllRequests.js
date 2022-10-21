@@ -12,6 +12,7 @@ const AllRequests = () => {
     
     const [requestList, setRequestList] = useState([]); 
     const navigate = useNavigate(); 
+    const [QuotesData, setQuotesData] = useState(null); 
 
     useEffect(()=>{
         axios.get('http://localhost:8000/api/callbells')
@@ -34,8 +35,20 @@ const AllRequests = () => {
             console.log(err)
         })
     }
+    
+    useEffect(()=>{
+        axios.get("https://api.quotable.io/random")
+    .then(res => {
+        console.log(res.data.content)
+        setQuotesData(res.data.content)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+    }, [])
+
     return (
-        <div> 
+        <div className="container"> 
             <div className="nav-bar">
                 <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nancy-do-9588a9158/">Contact the Creator</a> |                    
                 <a className="nav-bar h5" target="_blank" rel="noopener noreferrer" href="https://github.com/nancydo272">About the Creator </a> |
@@ -78,9 +91,9 @@ const AllRequests = () => {
                 <div className="row1">
                     <img className="westImages" src={westbanner} alt="teal scrubs"/>
                     <div className="message">
-                        <p>TODAY'S QUOTES IS FROM ZENQUOTES</p>
-                        <h2>"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart."</h2>
-                        <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://zenquotes.io/">More from ZenQuotes</a>
+                        <p>TODAY'S QUOTES IS FROM QUOTABLE API</p>
+                        <h2>"{QuotesData}"</h2>
+                        <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://api.quotable.io">More Quotes</a>
                     </div>
                 </div>
                 <div className ="row2">
@@ -102,7 +115,7 @@ const AllRequests = () => {
                 <div className="row4">
                     <div className="message">
                         <p>PHILADELPHIA, PA</p>
-                        <h2>The city of brotherly love! We are known for our iconic food scene and arts districts. Explore NOW!</h2>
+                        <h2>The city of brotherly love! Home of the Eagles, Phillies, Flyers and Unions! Explore NOW!</h2>
                         <a className="rowButton" target="_blank" rel="noopener noreferrer" href="https://www.visitphilly.com/"> Explore Philly!</a>
                     </div>
                     <img className="westImages" src={west3} alt="Philadelphia City"/>
