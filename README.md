@@ -1,15 +1,15 @@
 # 5WestProject
 
-##Demo Video of My 5WestProject
+## Demo Video of My 5WestProject
 
 https://user-images.githubusercontent.com/98551986/202879391-2df0f351-3840-4959-a631-999ace16edec.mp4
 
 
 
-##Inspiration For This Project
+## Inspiration For This Project
 
 
-###Technologies Used in this Project
+### Technologies Used in this Project
 
 
 ##Original Wireframe Made With Balsamic 
