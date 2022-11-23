@@ -17,11 +17,11 @@ This project allows patients to input thier request in real time, when a hospita
 
 ### Technologies Used in this Project
 
-**LANGUAGES:** HTML5, CSS, JavaScript
-**FRAMEWORKS/LIBRARIES:** Bootstrap, Mongoose, Express.js, React , Node.js
-**Cloud:** AWS/EC2 for Deployment --> http://3.87.192.203/
-**DATABASES:** MySQL, MongoDB, 
-**TOOLS:** Git/GitHub, API, VsCode, Postman, MongoDB Compass, terminal, Balsamiq 
+- **LANGUAGES:** HTML5, CSS, JavaScript
+- **FRAMEWORKS/LIBRARIES:** Bootstrap, Mongoose, Express.js, React , Node.js
+- **Cloud:** AWS/EC2 for Deployment --> http://3.87.192.203/
+- **DATABASES:** MySQL, MongoDB, 
+- **TOOLS:** Git/GitHub, API, VsCode, Postman, MongoDB Compass, terminal, Balsamiq 
 
 ## Original Wireframe Made With Balsamic 
 <img width="789" alt="Screen Shot 2022-08-31 at 10 36 17 PM" src="https://user-images.githubusercontent.com/98551986/202959906-32df90d9-7351-4701-a43f-c2b554ac9efb.png">
@@ -41,5 +41,5 @@ This project allows patients to input thier request in real time, when a hospita
 
 I changed the original front-end design of this project because it looked too simple and plain. I decided to clone the design from Grove.co, I frequently visited because I really liked their design. Please visit them here --> https://www.grove.co/
 
-#####Issues
+##### Issues
 The biggest issue I would love to fix in the distant future is to make this React Project more mobile friendly. I am currently taking some UX-design classes to make this better.
